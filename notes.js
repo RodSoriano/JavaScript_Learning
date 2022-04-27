@@ -1,4 +1,3 @@
-
 //  VARIABLES
 
 // Declaring a variable
