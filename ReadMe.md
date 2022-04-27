@@ -1,4 +1,5 @@
-###Js Crash Course for Begginers##
+Js Crash Course for Begginers
 
-This is a crashcourse from all that I'm learning. Here I will be posting all my progress on my learning of JavaScript.
-Hope this is of good use to you as it is to me, happy learning.
+Here I will be posting all my progress of my learning on the JavaScript lenguage.
+Hope this is of good use to you as it is to me, 
+Happy learning.
