@@ -18,28 +18,28 @@ switch (userDay)
             console.log("Following day: Thursday");
         break;
 
-                case "Thursday":
+        case "Thursday":
             console.log("Following day: Friday");
         break;
 
-                case "Friday":
+        case "Friday":
             console.log("Following day: Saturday");
         break;
 
-                case "Saturday":
+        case "Saturday":
             console.log("Following day: Sunday");
         break;
 
-                case "Sunday":
+        case "Sunday":
             console.log("Following day: Monday");
         break;
 
         //not sure of the coding from this point on
-                case isNaN(userDay):
+        case isNaN(userDay):
             console.log("Numbers are not accepted");
         break;
 
-                default:
+        default:
             console.log("Please enter a day");
         break;
     }
@@ -48,7 +48,8 @@ switch (userDay)
 
     const day = prompt("Enter a day of the week:");
 
-    // Solution using an if
+    // Solution using an if sentence
+
     if (day === "monday" || day === "Monday") 
         {
             console.log("Tomorrow is Tuesday");
