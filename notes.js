@@ -195,3 +195,276 @@ alert(`Hello, ${name}`);        //alert nos muestra algo en la window asi como p
 
 
 
+
+
+//DOM
+
+var main = document;              //document nos sirve como primer objeto para acceder al dom
+document.getElementById('id');    //nos permite obtener un elemento en contreto por medio de su 'id'
+
+
+
+
+
+
+
+
+
+
+
+//OOP AND OBJECTS
+
+//create new objetc
+
+function showFullName()
+    {
+        return "ryan ray";
+    }
+
+
+const USER1 = {
+    name: "rod",
+    last: "rec",
+    age: 25,
+    showName: showFullName,     //hace referencia a la funcion en la linea 3.
+    //otra forma de definir metodo
+    showName1: function showFullName()
+        {
+            return this.name + this.last;
+        },
+    //otra forma
+    showName2()
+        {
+            return this.name + " " +  this.last;
+        }
+};
+
+// console.log(user.showName());
+
+
+
+
+
+//constructor
+
+//objeto literal
+
+const USER2 = {
+    name: "max",
+    last: "ric",
+    age: 25,
+    showName1: function showFullName()
+        {
+            return this.name + this.last;
+        },
+
+};
+
+//constructor
+
+function Persona0() {
+    this.name = "";
+    this.last = "";
+    this.age = 0;
+    this.showName = function() {
+        return `${this.name} ${this.last}`;
+    }
+}
+
+//nuevoa instancia
+
+const USER3 = new Persona0();
+
+USER3.name = "Alex";
+USER3.last = "rein";
+USER3.age = 30;
+
+// console.log(user3);
+// console.log(user3.showName());
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+
+
+const ACCOUNT = {
+    number: "1234",
+    amount: 100,
+
+    deposit(quantity)
+        {
+            this.amount += quantity;
+        },
+    withdraw(quantity)
+        {
+            this.amount -= quantity;
+        }
+}
+
+// account.deposit(125);
+// account.withdraw(50);
+
+// console.log(account);
+
+// const persson = new Object();
+
+//console.log(Object.keys(objeto))
+//Object.values = nos muestra valores
+
+
+function Persona00()
+    {
+        this.name = "";
+        this.lastName = "";
+    }
+
+const persona = new Persona00();
+
+function Person() {
+    "use strict";
+    this.name = "";
+    this.lastName = "";
+}
+
+//con use strict nos aseguramos de que cada vez que se cree un nuevo objeto
+//de este objeto se utilice el new para no generar errores
+//es importante usar "new" porque sino el oibjeto asigna sus propiedades al objeto que lo contiene
+//y eso nos puede generar problemas
+
+
+//objeto window
+//window.document.body -> nos deja acceder al body del documento DOM??
+
+
+//prototype
+
+//nos sirve para extender nuevas funcionalidades tipo
+Person.prototype.greet = function (name)
+    {
+        return `Hello my name is ${name}`;
+    }
+
+//e=prototype nos permite crear ese nuevo metodo greet dentro del constructor y 
+//estara disponible para todos los objetos person solo seria de llamarlo
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//OOP
+// crear codigo que sea modular y reutilizable
+//modularidad es la forma en la que podemos dividir en pequenas partes que se puede reutilizaer
+
+//capacidad de modelar problemas a traves de objetos
+//describe realty using objects and its relationship
+
+//1. association, capabiluty to refer anbother
+//2. aggregation, capability to refer one or more independent object
+//3. conposition, capability to refer one or more dependent objects
+
+//grant modularity and code reuse
+
+//1. encapsulation, capability to concentrate into a single entity data with hidden internal detalis
+//2. inheritance, mechanismn by which object acquires some or all feature of one or more objects
+//3. polymorphism, capable to process different types of objects but still give a response in return
+//4. abstraction, we dont need to know or give an object all its functions for it to work on determine circumnstances
+
+//model through objects
+
+
+//asociacion
+class Persona1
+    {
+        constructor(name, lastname)
+            {
+                this.name = name;
+                this.lastname = lastname;
+            }
+    }
+
+const JOHN = new Persona1('John', 'Ray');
+const MARIA = new Persona1('Maria', 'Perez');
+
+MARIA.parent = JOHN; //relacion a traves de una propiedad
+// ahi le agregamos a maria el atributo parent y este es igual a john
+
+//agregacion
+//una forma de asociacion en el que relaciona dos o mas objetos, existe un obj mayor
+//es el que contiene los otros objetos son Aggregate, los que estan dentro son components
+
+const COMPANY =
+    {
+        name: 'fazt-tech',
+        employees: []
+    }
+
+//podemos anhadir objetos a otro objeto se hace con .push
+
+COMPANY.employees.push(JOHN);
+COMPANY.employees.push(MARIA);
+
+//composition
+//muchos obj pueden pertenecer a un obj mayor pero estos no pueden vivir sin el obj mayor
+//aqui se puede ver como address no puede existir sin su contenedor
+
+const PERSON =
+    {
+        name: 'ryan',
+        last: 'ray',
+        address: 
+            {
+                street: 'street',
+                city: 'city',
+                country: 'country'
+            }
+    }
+
+//encapsulamiento
+//por medio de metodos se accede a las propiedades
+
+function Company(name)
+    {
+        let employees = [];
+        this.name = name;
+
+        this.getEmployees = function ()
+            {
+                return employees;
+            }
+
+        this.addEmployee = function(employee)
+            {
+                employees.push(employee);
+            }
+    }
+
+const COMPANY1 = new Company('Coca');
+const COMPANY2 = new Company('pepsi');
+
+// COMPANY2.addEmployee({name: 'Rosa'}); // aqui alteramos una propiedad por medio de un metodo
+//  console.log(COMPANY2.getEmployees());  //aqui vemos como acceder a una propiedad desde un metodo esto encapsula dicha propiedad a no ser accesible
+
+ //herencias
+
+ function Persson()
+    {
+        this.name = '';
+        this.lastName = '';
+    }
+
+function Progammer()
+    {
+        this.lenguage = '';
+    }
+
+Progammer.prototype = new Persson();
+
+console.log(Progammer);
+console.log(Persson);
+
+const PROGRAMMER = new Progammer();
+PROGRAMMER.name = 'ryan';
+PROGRAMMER.lastName = 'reynolds';
+
+console.log(PROGRAMMER);
+
+//tambien se puede hacer por medio de clases en el que se hereda se pone el extends from
+//en el constructor va un metodo llamado super(parametros o variables)->esta ayuda a instanciar el constrtuctor del padre
