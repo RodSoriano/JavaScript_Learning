@@ -185,14 +185,27 @@ prompt(text,defaultText);       //text una cadena que se muestra al usuario, OOP
                                 //aqui intercambiamos info con el user asking them to enter a value that will be saved into the variable that has prompt in it
 
 const name = prompt("Enter your first name:");
-alert(`Hello, ${name}`);        //alert nos muestra algo en la window asi como prompt 
+alert(`Hello, ${name}`);        //alert nos muestra una ventana emergente de alerta pop up
 
 
+sentence.toLowerCase();         //converts string to lower case only
+sentence.toUpperCase();
+sentence.substr();
+
+Math.floor();
+Math.random();
+
+Array.lenght    //count($var)
+Array.join(',') //une el array y adentro va un delimitador entre cada elemento
+Array.push({})  //lleva llaves si son varios valores con  esto pone al final
+Array.unshift()//es para poner cosas adelante
 
 
-
-
-
+Array.forEach(function(parametroDelArray)
+    {
+       console.log(parametroDelArray); 
+    });
+        //en el foreach se pasa una funcion con un parametro de lo que este en array
 
 
 
@@ -202,12 +215,30 @@ alert(`Hello, ${name}`);        //alert nos muestra algo en la window asi como p
 var main = document;              //document nos sirve como primer objeto para acceder al dom
 document.getElementById('id');    //nos permite obtener un elemento en contreto por medio de su 'id'
 
+document.querySelectorAll('css selector') //aqui le pasamos un selector de css
+selector.divThatContains.thingOfCss = "left" //aqui interactuamos con el por medio de js
+
+boton.addEventListener('click', function(){}) //en la var ya tiene que estar almacenado parte del dom a interactuar interactua al clcik 
+    //"keyup" es cuando levantas el dedo de una tecla
+    //"change" es cuando estoy enfocado en un elemento y salgo de el eso es focus and blurred out
 
 
 
+//event delegation
+//event bubbling??
 
+document.querySelector('.button-container').addEventListener('click', function(event)
+    {
+        if(event.target.tagName === 'button') //aqui pasamos verificacion de que no este haciendo clic en algo fuera de un boton sino seria tambien un evento y mostraria el mensaje sin tocar el boton necesariamente
+            {
+                alert(`you clicked on button ${event.target.innerText}`);
+            }
+    });
 
+//aqui obtenemos un selector que es un contenedor de varios botones, al anhadir el listener pasamos la funcion
+//al hacer clic con un parametro event (??dudas?? nos sirve como para ver que evento fue hecho?? y para acceder a el se hace event.target->algo que querramos de ahi)
 
+//STATES?
 
 
 
