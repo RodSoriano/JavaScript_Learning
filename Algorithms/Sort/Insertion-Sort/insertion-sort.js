@@ -7,11 +7,12 @@
 
 //on the second loop we take the index we are at and compare it if j > current then we take j to j+1 position
 
+//an array of length 1 is sorted arr = [5] -> is sorted because there is only one element
 
 let nums = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-let numberToInsert //9[1];
-let i; //9[1]
-let j; //10[0]
+let numberToInsert = 0; //9[1];
+let i = 0; //9[1]
+let j = 0; //10[0]
 
 function insertionSort(nums)
     {
