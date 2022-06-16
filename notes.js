@@ -499,3 +499,194 @@ console.log(PROGRAMMER);
 
 //tambien se puede hacer por medio de clases en el que se hereda se pone el extends from
 //en el constructor va un metodo llamado super(parametros o variables)->esta ayuda a instanciar el constrtuctor del padre
+
+
+
+//FIFO first in first out
+//LIFO lastin in first out
+
+//PILAS son LIFO, estructura de datos
+//push y pop son por lo general lo que usa stack
+//push ingresar datos
+//pop eliminar dato
+
+let stack = [];
+
+stack.push(1); //[1]
+stack.push(2); // [1,2]
+
+stack.pop(); // [1]
+
+console.log(stack);
+
+
+
+
+//COLAS FIFO
+
+var queu = [];
+
+queu.push(1); // [1]
+queu.push(10); // [1,10]
+queu.shift() // remueve el elemento 1 del arreglo [10]
+
+console.log(queu); // [10]
+
+//metodo tradicional
+
+function queu()
+    {
+        let cola = [];
+
+        this.prototype.enqueu = element => cola.push(element);
+
+        this.prototype.dequeu = () => cola.shift();
+
+        this.prototype.size = () => cola.length();
+    }
+
+
+
+
+
+
+
+//LISTAS
+//un array, un listado de cosas
+
+let arr = [];
+
+arr.push(1);
+arr.push(2);
+arr.push(3);
+
+console.log(arr); //[1,2,3]
+
+
+
+
+
+//LISTAS ENLAZADAS
+//nodos enlazados que contienen informacion
+
+let array = [4,8,5,3,2];
+
+//esto quiere decir que el 4 tiene referencia que el que le sigue
+//es el 8, el ultimo elemento tiene referencia nula porque no existe
+
+//necesitamos el primer dato o nodo y su referencia
+
+function nodo(datos)
+    {
+        this.data = datos;
+        this.next = null;
+    }
+
+//en la lista necesitamos dos cosas
+//puntero
+//
+function list()
+    {
+        this.head = null;
+        this._length = 0;
+    }
+
+list.prototype.add = function(datos)
+    {
+        let node    = new nodo(datos);
+        let current  = this.head;
+
+        //si esta vacia
+        if(!current)
+            {
+                this.head = node;
+                this._lenght++;
+
+                return node;
+            }
+
+        //si nuestra lista NO esta vacia
+        while(current.next) //mientras de true
+            {
+                current = current.next; //se para cuando next quede vacio
+            }
+
+        current.next = node;
+        this._lenght++;
+
+        return node;
+    }
+
+list.prototype.getAll = function()
+    {
+        current = this.head; // empezamos con la cabeza
+
+        if(!current)
+            {
+                console.log("vacio");
+                return;
+            }
+
+        while(current)
+            {
+                console.log(current.data);
+                current.next;
+            }
+
+        return;
+    }
+
+
+
+
+
+
+//ARBOLES
+// arboles binarios 
+//estructuras de nodos
+//cada nodo se va separando en si mismo de izquierda a derecha 
+// y asi cada nodo se va separando y va bajando y sub dividiendose mas
+
+//nodo raiz que es nodo superior
+//nodo padre un nodo que tiene hijos
+//nodo hijo que es descendiente de otro nodo
+//nodos hermanos comparten el mismo padre
+//hojas que son nodos sin hijos
+
+//las lineas que recorren los nodos son caminos
+
+//un nodo binario solo puede tener 2 hijos
+//los arboles se recorren de derecha a izquierda
+
+//los nodos padre tienen 10 siempre tiene dos ijos el izquierdo va a ser 5 el derecho 12
+//uno es menor y el otro es mayor que el padre
+
+function binarySearchTree(value)
+    {
+        this.value  = value;
+        this.right  = null;
+        this.left   = null;
+    }
+
+binarySearchTree.prototype.insert = function(value)
+    {
+        //compara si hay algun valor a la derecha
+        //si hay valor hace recursion recorriendo
+        //si no hay nada crea el nodo
+        if(value > this.value)
+            {
+                if(this.right !== null)
+                    {
+                        this.right.insert(value);
+                    }
+                else
+                    {
+                        this.right = new binarySearchTree(value);
+                    }
+            }
+    }
+
+binarySearchTree.prototype.contains = function(value)
+    {
+
+    }
