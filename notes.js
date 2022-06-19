@@ -685,8 +685,8 @@ binarySearchTree.prototype.insert = function(value)
                     }
             }
     }
+//its unfinished...
 
-binarySearchTree.prototype.contains = function(value)
-    {
+//ARRAYS
 
-    }
+array[i].id; //we can acces a property of arr on its [i] position with the dot id because we are searching for id

@@ -1,7 +1,7 @@
 //first we need to set our base case or the fisrt parameters we already know
 //in this case fib[0] = 1 && fib[1] = 0
 
-function fib(n)
+function fib0(n)
     {
         if(n === 2 || n === 1)
             {
