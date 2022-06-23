@@ -690,3 +690,33 @@ binarySearchTree.prototype.insert = function(value)
 //ARRAYS
 
 array[i].id; //we can acces a property of arr on its [i] position with the dot id because we are searching for id
+
+
+//PROMISES'
+
+const makeServerRequest = new Promise((resolve, reject) => {});
+
+let input = Number(prompt('cuantos anos tienes?'));
+
+const test = new Promise((resolve, reject) => {
+        if(input > 18) {
+                resolve('eres mayor de edad');
+            }
+        else {
+                reject('no eres mayor de edad');
+            }
+    });
+
+test.then(response => console.log(response))
+.catch(error => console.log(error));
+
+
+
+
+//REGEX
+
+//test regex
+
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString);
