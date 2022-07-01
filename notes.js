@@ -507,8 +507,10 @@ console.log(PROGRAMMER);
 
 //PILAS son LIFO, estructura de datos
 //push y pop son por lo general lo que usa stack
-//push ingresar datos
-//pop eliminar dato
+//push ingresar datos al final del array
+//pop eliminar dato al final del array
+//unshift para ingresar cosas al principio del array
+//shift para eliminar cosas al inicio del array
 
 let stack = [];
 
