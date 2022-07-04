@@ -722,3 +722,16 @@ test.then(response => console.log(response))
 let myString = "Hello, World!";
 let myRegex = /Hello/;
 let result = myRegex.test(myString);
+
+
+
+
+
+
+
+
+
+
+//  MATH
+
+let math = Math.PI //-> this shows the pi number
