@@ -1,13 +1,22 @@
-let input =19;
+function Persson()
+{
+    this.name = '';
+    this.lastName = '';
+}
 
-const test = new Promise((pepito1, reject) => {
-        if(input > 18) {
-                pepito1('eres mayor de edad');
-            }
-        else {
-                reject('no eres mayor de edad');
-            }
-    });
+function Progammer()
+{
+    this.lenguage = '';
+}
 
-test.then(response => console.log(response))
-.catch(error => console.log(error));
+Progammer.prototype = new Persson();
+
+console.log(Progammer);
+console.log(Persson);
+
+const PROGRAMMER = new Progammer();
+PROGRAMMER.name = 'ryan';
+PROGRAMMER.lastName = 'reynolds';
+PROGRAMMER.lenguage = 'PHP';
+
+console.log(PROGRAMMER);

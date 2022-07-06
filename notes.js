@@ -128,8 +128,10 @@ x ??= y;
 
 
 
+// COMPLEXITY 
 
-
+//Space complexity ys how much memory do we use?
+//time complexity is how many operations are executed?
 
 
 
@@ -241,9 +243,9 @@ document.querySelector('.button-container').addEventListener('click', function(e
 //STATES?
 
 
-
-
 //OOP AND OBJECTS
+
+//anything that has an dot is an object
 
 //create new objetc
 
@@ -279,6 +281,7 @@ const USER1 = {
 //constructor
 
 //objeto literal
+//object literal
 
 const USER2 = {
     name: "max",
@@ -694,6 +697,10 @@ binarySearchTree.prototype.insert = function(value)
 array[i].id; //we can acces a property of arr on its [i] position with the dot id because we are searching for id
 
 
+
+
+
+
 //PROMISES'
 
 const makeServerRequest = new Promise((resolve, reject) => {});
@@ -735,3 +742,24 @@ let result = myRegex.test(myString);
 //  MATH
 
 let math = Math.PI //-> this shows the pi number
+
+
+
+
+
+
+
+
+
+
+
+
+//FUNCTIONA PROGRAMMING
+//breaking code into verbs using functions 
+//oop is about the nouns is about where we live in the physical world
+
+//making core functions that dont have side effects, input, output
+//its easier to test
+
+
+
