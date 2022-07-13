@@ -275,6 +275,8 @@ const USER1 = {
 // console.log(user.showName());
 
 
+// sabemos que un metodo es un metodo por que lleva parentesis
+// a diferencia de una propiedad que solo se llama por su nombre despues del punto
 
 
 
@@ -505,6 +507,22 @@ console.log(PROGRAMMER);
 
 
 
+
+
+
+
+//objects
+
+//can use dot when its a string only
+//we use brackets for string, numbers, variables, expressions
+
+
+
+
+
+
+
+
 //FIFO first in first out
 //LIFO lastin in first out
 
@@ -568,7 +586,7 @@ arr.push(3);
 console.log(arr); //[1,2,3]
 
 
-
+//property name can be called also a key
 
 
 //LISTAS ENLAZADAS
@@ -696,7 +714,7 @@ binarySearchTree.prototype.insert = function(value)
 
 array[i].id; //we can acces a property of arr on its [i] position with the dot id because we are searching for id
 
-
+//bracket notation, one way arround is something["name"] = "ryan";
 
 
 

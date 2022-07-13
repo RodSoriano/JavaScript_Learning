@@ -1,22 +1,18 @@
-function Persson()
-{
-    this.name = '';
-    this.lastName = '';
-}
+//create an object using bracket and dot notation that represents
+//the characteristics and related data you may find in a
+// Game of Clue
 
-function Progammer()
-{
-    this.lenguage = '';
-}
+let game = {};
 
-Progammer.prototype = new Persson();
+game.murderer = "??";
 
-console.log(Progammer);
-console.log(Persson);
+game['weapons'] = [
+    {type: 'pipe', location: 'garage'},
+    {type: 'stick', location: 'garden'},
+    {type: 'angry cat', location: 'lounge'}];
 
-const PROGRAMMER = new Progammer();
-PROGRAMMER.name = 'ryan';
-PROGRAMMER.lastName = 'reynolds';
-PROGRAMMER.lenguage = 'PHP';
+game.characters = [];
 
-console.log(PROGRAMMER);
+game.characters.push('Miss Scarlet');
+
+console.log(game);
