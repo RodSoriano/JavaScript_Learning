@@ -515,7 +515,7 @@ console.log(PROGRAMMER);
 
 //can use dot when its a string only
 //we use brackets for string, numbers, variables, expressions
-
+// object.freeze??
 
 
 
@@ -717,8 +717,6 @@ array[i].id; //we can acces a property of arr on its [i] position with the dot i
 //bracket notation, one way arround is something["name"] = "ryan";
 
 
-
-
 //PROMISES'
 
 const makeServerRequest = new Promise((resolve, reject) => {});
@@ -781,3 +779,14 @@ let math = Math.PI //-> this shows the pi number
 
 
 
+// ES6 destructuring
+// a way of defining variables and take them outside of an object or an array
+
+let {first, second} = {first: 0, second: 1} //here we have the target or var declaration on the left
+//                      and here we have the values
+
+
+//swap variables easy without temp
+var one = 1; var two = 2;
+[two, one] = [one, two];
+console.log(one,two);
